@@ -1,7 +1,8 @@
 from time import sleep
 import serial
 
-ser = serial.Serial('COM3', baudrate=9600, timeout=1)  # Establish the connection on a specific port
+# ser = serial.Serial('COM3', baudrate=9600, timeout=1)  # Establish the connection on a specific port
+ser = serial.Serial('/dev/ttyUSB0', baudrate=9600, timeout=1)  # Establish the connection on a specific port
 counter = 32  # Below 32 everything in ASCII is gibberish
 while True:
     counter += 1
